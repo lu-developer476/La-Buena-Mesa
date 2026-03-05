@@ -135,6 +135,13 @@ main {
   line-height: 1.5;
 }
 
+/* JUSTIFICACIÓN DE TEXTOS */
+
+.panel p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
 .hero-slogan {
   font-size: 1.1rem;
   font-weight: 700;
@@ -258,6 +265,12 @@ footer {
 
   .panel {
     scroll-margin-top: 110px;
+  }
+
+  /* mejor lectura en móvil */
+
+  .panel p {
+    text-align: left;
   }
 }
 
