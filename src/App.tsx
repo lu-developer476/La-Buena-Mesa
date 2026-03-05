@@ -87,7 +87,7 @@ export default function App() {
           <div className="contact-grid">
             <article className="contact-card">
               <h3>Catering</h3>
-              <p>Contanos tu idea y te armamos esa propuesta soñada y a tu medida</p>
+              <p>Contanos tu idea, te armamos esa propuesta soñada y a tu medida.</p>
               <CateringForm />
             </article>
 
