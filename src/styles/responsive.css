@@ -1,0 +1,23 @@
+
+body{font-family:Arial;margin:0;padding:20px}
+header{display:flex;align-items:center;gap:10px}
+
+/* mobile */
+@media (max-width:480px){
+body{padding:10px}
+}
+
+/* tablet */
+@media (min-width:481px) and (max-width:768px){
+body{background:#fafafa}
+}
+
+/* laptop */
+@media (min-width:769px) and (max-width:1200px){
+body{background:#fff}
+}
+
+/* desktop */
+@media (min-width:1201px){
+body{max-width:1200px;margin:auto}
+}
