@@ -1,19 +1,22 @@
+import { FormEvent, useState } from "react"
 
-import {useState} from "react"
+export default function SuggestionForm() {
+  const [sent, setSent] = useState(false)
 
-export default function SuggestionForm(){
-const[sent,setSent]=useState(false)
+  function submit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setSent(true)
+  }
 
-function submit(e:any){
-e.preventDefault()
-setSent(true)
-}
+  if (sent) {
+    return <p className="form-message">💚 Gracias por tu sugerencia.</p>
+  }
 
-return sent ? <p>Gracias por tu sugerencia.</p> : (
-<form onSubmit={submit}>
-<input placeholder="Nombre"/>
-<textarea placeholder="Sugerencia"/>
-<button>Enviar</button>
-</form>
-)
+  return (
+    <form className="site-form" onSubmit={submit}>
+      <input placeholder="Nombre" />
+      <textarea placeholder="Sugerencia" rows={4} />
+      <button type="submit">Enviar</button>
+    </form>
+  )
 }
