@@ -194,6 +194,12 @@ button {
   border-radius: 10px;
   border: 1px solid #99f6e4;
   padding: 10px 12px;
+  width: 100%;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
 button {
