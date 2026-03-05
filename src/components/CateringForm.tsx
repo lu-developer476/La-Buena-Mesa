@@ -9,7 +9,7 @@ export default function CateringForm() {
   }
 
   if (sent) {
-    return <p className="form-message">✅ Solicitud enviada. Te contactaremos pronto.</p>
+    return <p className="form-message">☑ Solicitud enviada, muchas gracias por elegirnos. Te contactaremos pronto.</p>
   }
 
   return (
