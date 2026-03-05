@@ -33,7 +33,7 @@ export default function App() {
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((prev) => !prev)}
           >
-           ➖
+          ➖
           </button>
 
           <nav className={`site-nav ${menuOpen ? "open" : ""}`} aria-label="Navegación principal">
