@@ -105,7 +105,7 @@ export default function App() {
 
       <footer>
         <div className="footer-copy">
-          <span className="text-cyber-gold">©</span> {new Date().getFullYear()} Todos los derechos reservados • Built with JavaScript React.js & TypeScript • UX/UI Interface • Deployed on Vercel ®
+          <span className="text-cyber-gold">©</span> {new Date().getFullYear()} Todos los derechos reservados • Built with JavaScript, React.js & TypeScript • UX/UI Interface • Deployed on Vercel ®
         </div>
       </footer>
     </div>
