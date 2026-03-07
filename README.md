@@ -21,7 +21,7 @@ Diseñado como una experiencia simple y moderna para explorar un **menú digital
 -   TypeScript
 -   Vite
 -   CSS3
--   Vercel (deploy)
+-   Vercel
 
 ------------------------------------------------------------------------
 
