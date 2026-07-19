@@ -67,7 +67,7 @@ export default function App() {
               En este espacio vas a encontrar platos caseros preparados con gran dedicación, bebidas
               finamente seleccionadas y una experiencia pensada para que tu visita sea inolvidable.
             </p>
-            <p className="hero-slogan">Tu mesa de todos los días, con sabor inolvidable.</p>
+            <p className="hero-slogan">Tu mesa de todos los días, con sabores destacados.</p>
 
             <div className="section-heading">
               <span className="eyebrow">Nuestra carta</span>
