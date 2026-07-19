@@ -64,8 +64,8 @@ export default function App() {
           <section id="menu" className="panel section-menu">
             <h2>Bienvenidos</h2>
             <p>
-              En este espacio vas a encontrar platos caseros preparados con dedicación, bebidas
-              cuidadosamente seleccionadas y una experiencia pensada para que cada visita se disfrute de verdad.
+              En este espacio vas a encontrar platos caseros preparados con gran dedicación, bebidas
+              finamente seleccionadas y una experiencia pensada para que tu visita sea inolvidable.
             </p>
             <p className="hero-slogan">Tu mesa de todos los días, con sabor inolvidable.</p>
 

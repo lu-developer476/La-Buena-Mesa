@@ -86,7 +86,7 @@ body {
 h1, h2, h3, p { margin: 0; }
 
 h1 {
-  font-size: clamp(2rem, 6vw, 4.7rem);
+  font-size: clamp(1.9rem, 5vw, 4.2rem);
   line-height: 0.95;
   letter-spacing: -0.05em;
 }
@@ -311,7 +311,7 @@ footer {
   .brand-row { gap: 10px; }
   .brand-row img { width: 54px; height: 54px; }
 
-  h1 { font-size: clamp(1.85rem, 9vw, 3rem); letter-spacing: -0.04em; }
+  h1 { font-size: clamp(1.7rem, 7.5vw, 2.4rem); letter-spacing: -0.04em; }
   .tagline { font-size: clamp(0.95rem, 4.2vw, 1.2rem); }
 
   .panel { scroll-margin-top: 108px; line-height: 1.55; }
@@ -330,7 +330,7 @@ footer {
   .hamburger-btn { width: 48px; height: 48px; border-radius: 14px; }
   .site-nav { position: fixed; top: 76px; right: 10px; left: 10px; width: auto; }
 
-  h1 { font-size: clamp(1.75rem, 11vw, 2.45rem); }
+  h1 { font-size: clamp(1.6rem, 8vw, 2rem); }
   h2 { font-size: clamp(1.55rem, 8vw, 2.1rem); }
   p { font-size: 1rem; }
 
