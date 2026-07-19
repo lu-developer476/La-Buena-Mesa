@@ -27,9 +27,9 @@ export default function App() {
       <header className="main-header">
         <div className="brand-row">
           <img src="/logo.png" height="64" width="64" alt="Logo de La Buena Mesa" />
-          <div>
+          <div className="brand-copy">
             <h1>La Buena Mesa</h1>
-            <p className="tagline">Nuestros sabores destacados, tu experiencia premium</p>
+            <p className="tagline">Sabores caseros, cocina honesta y momentos para compartir</p>
           </div>
         </div>
 
@@ -63,16 +63,19 @@ export default function App() {
         {activeSection === "menu" && (
           <section id="menu" className="panel section-menu">
             <h2>Bienvenidos</h2>
-            <p>
+            <p className="intro-copy">
               En este espacio vas a encontrar platos caseros preparados con gran dedicación, bebidas
               finamente seleccionadas y una experiencia pensada para que tu visita sea inolvidable.
             </p>
             <p className="hero-slogan">Tu mesa de todos los días, con sabor inolvidable.</p>
 
-            <h2>Menú</h2>
-            <p>
-              Nuestros mejores platos y bebidas listos para que elijas lo que más te guste. Cortesía de la casa.
-            </p>
+            <div className="section-heading">
+              <span className="eyebrow">Nuestra carta</span>
+              <h2>Menú</h2>
+              <p>
+                Elegí entre principales, bebidas y postres preparados para disfrutar sin apuro.
+              </p>
+            </div>
             <Menu />
           </section>
         )}
@@ -80,7 +83,7 @@ export default function App() {
         {activeSection === "quienes-somos" && (
           <section id="quienes-somos" className="panel section-quienes">
             <h2>Quiénes somos</h2>
-            <p>
+            <p className="intro-copy">
               La Buena Mesa nació con una idea clara y sincera: crear un lugar donde la comida vuelva a ser lo que siempre debió ser, abundante, auténtica y hecha con dedicación.
             </p>
             <p>
@@ -101,9 +104,8 @@ export default function App() {
         {activeSection === "contacto" && (
           <section id="contacto" className="panel section-contacto">
             <h2>Contacto</h2>
-            <p>
-              Queremos escucharte.
-              Ponte en contacto con nosotros para consultar nuestros servicios o dejarnos tus sugerencias.
+            <p className="intro-copy">
+              Queremos escucharte. Ponete en contacto con nosotros para consultar nuestros servicios o dejarnos tus sugerencias.
             </p>
             <div className="contact-grid">
               <article className="contact-card">
