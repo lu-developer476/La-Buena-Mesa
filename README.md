@@ -1,191 +1,210 @@
 # 🍽️ La Buena Mesa
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-Aplicación web de menú gastronómico desarrollada con **React + TypeScript + Vite**. El proyecto presenta distintos platos, bebidas y postres de forma visual, además de incluir formularios para **catering y sugerencias de usuarios**.
+La Buena Mesa es una aplicación web de menú gastronómico desarrollada con **React 18 + TypeScript + Vite**. Actualmente funciona como una experiencia digital de restaurante con navegación por secciones, carta visual de productos, historia institucional y formularios de contacto para catering y sugerencias.
 
-Diseñado como una experiencia simple y moderna para explorar un **menú digital de restaurante**.
+El sitio está pensado para presentar platos, bebidas y postres de forma clara, responsive y moderna, usando imágenes locales y una interfaz simple orientada a dispositivos móviles y escritorio.
 
-------------------------------------------------------------------------
+---
 
-# 📦 Stack tecnológico
+## ✅ Estado actual del proyecto
 
--   React
--   TypeScript
--   Vite
--   CSS3
--   Vercel
+- Aplicación frontend de una sola página (**SPA**) con React y Vite.
+- Navegación interna mediante estado local entre las secciones **Menú**, **Quiénes somos** y **Contacto**.
+- Header sticky con marca, logo y menú hamburguesa desplegable.
+- Sección de bienvenida con slogan y carta gastronómica.
+- Grilla de **20 productos** renderizados desde imágenes locales en `public/assets`.
+- Sección institucional con contenido de marca e historia del restaurante.
+- Sección de contacto con dos formularios:
+  - solicitud de catering;
+  - envío de sugerencias.
+- Confirmación visual al enviar cada formulario, sin persistencia ni backend.
+- Estilos responsive centralizados en `src/styles/responsive.css`.
+- Configuración de build y deploy preparada para Vercel.
 
-------------------------------------------------------------------------
+---
 
-# 📁 Estructura del proyecto
+## 📦 Stack tecnológico
 
-    La-Buena-Mesa
-    │
-    ├── public/
-    │   ├── assets/           # Imágenes de platos y bebidas
-    │   ├── favicon.ico
-    │   └── logo.png
-    │
-    ├── src/
-    │   ├── components/
-    │   │   ├── Menu.tsx
-    │   │   ├── CateringForm.tsx
-    │   │   └── SuggestionForm.tsx
-    │   │
-    │   ├── styles/
-    │   │   └── responsive.css
-    │   │
-    │   ├── App.tsx
-    │   └── main.tsx
-    │
-    ├── index.html
-    ├── package.json
-    ├── tsconfig.json
-    ├── vite.config.ts
-    └── vercel.json
+- **React 18**
+- **TypeScript 5**
+- **Vite 5**
+- **CSS3**
+- **Vercel**
 
-------------------------------------------------------------------------
+---
 
-# 🚀 Instalación
+## 📁 Estructura del proyecto
+
+```text
+La-Buena-Mesa
+├── public/
+│   ├── assets/                 # Imágenes de platos, bebidas y postres
+│   ├── favicon.ico
+│   └── logo.png
+├── src/
+│   ├── components/
+│   │   ├── CateringForm.tsx     # Formulario de solicitud de catering
+│   │   ├── Menu.tsx             # Grilla visual del menú
+│   │   └── SuggestionForm.tsx   # Formulario de sugerencias
+│   ├── styles/
+│   │   └── responsive.css       # Estilos globales y responsive
+│   ├── App.tsx                  # Layout principal y navegación por secciones
+│   └── main.tsx                 # Punto de entrada de React
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── vercel.json
+```
+
+---
+
+## 🚀 Instalación
 
 Clonar el repositorio:
 
-``` bash
+```bash
 git clone https://github.com/usuario/la-buena-mesa.git
 ```
 
 Entrar en la carpeta del proyecto:
 
-``` bash
+```bash
 cd la-buena-mesa
 ```
 
 Instalar dependencias:
 
-``` bash
+```bash
 npm install
 ```
 
-------------------------------------------------------------------------
+---
 
-# ▶️ Ejecutar el proyecto
+## ▶️ Ejecutar en desarrollo
 
-Modo desarrollo:
-
-``` bash
+```bash
 npm run dev
 ```
 
-La aplicación se ejecutará en:
+Por defecto, Vite levanta la aplicación en:
 
-    http://localhost:5173
+```text
+http://localhost:5173
+```
 
-------------------------------------------------------------------------
+---
 
-# 🏗️ Build de Producción
+## 🏗️ Build de producción
 
-Generar versión optimizada:
+Generar una versión optimizada:
 
-``` bash
+```bash
 npm run build
 ```
 
-Preview del build:
+El comando ejecuta TypeScript y luego genera el build de Vite en `dist/`.
 
-``` bash
+Preview local del build:
+
+```bash
 npm run preview
 ```
 
-------------------------------------------------------------------------
+---
 
-# 🧩 Componentes Principales
+## 🧩 Componentes principales
 
-### Menu.tsx
+### `App.tsx`
 
-Renderiza el menú gastronómico mostrando:
+Define el layout general de la aplicación:
 
--   platos principales
--   bebidas
--   postres
+- estado de navegación activa;
+- apertura y cierre del menú hamburguesa;
+- header con logo y enlaces internos;
+- render condicional de las secciones **Menú**, **Quiénes somos** y **Contacto**;
+- footer con año dinámico.
 
-Las imágenes se cargan desde:
+### `Menu.tsx`
 
-    /public/assets
+Renderiza la carta gastronómica a partir de una lista local de imágenes. Cada tarjeta muestra:
 
-------------------------------------------------------------------------
+- imagen del producto;
+- nombre formateado a partir del nombre del archivo;
+- carga diferida de imágenes con `loading="lazy"`.
 
-### CateringForm.tsx
+### `CateringForm.tsx`
 
-Formulario para solicitar servicios de catering.
+Formulario controlado por estado local para solicitudes de catering. Incluye campos de nombre, email, cantidad de personas y detalles del evento. Al enviarlo, muestra un mensaje de confirmación.
 
-Permite ingresar:
+### `SuggestionForm.tsx`
 
--   nombre
--   datos de contacto
--   detalles del evento
+Formulario simple para sugerencias de usuarios. Al enviarlo, muestra un mensaje de agradecimiento.
 
-------------------------------------------------------------------------
+---
 
-### SuggestionForm.tsx
+## 🎨 Estilos e interfaz
 
-Formulario para que los usuarios envíen sugerencias al restaurante.
+Los estilos se encuentran en `src/styles/responsive.css` e incluyen:
 
-------------------------------------------------------------------------
+- variables CSS para colores, fondos, bordes y sombras;
+- fondo animado con gradiente turquesa;
+- paneles translúcidos con `backdrop-filter`;
+- header sticky;
+- menú hamburguesa desplegable;
+- grillas responsive para menú y contacto;
+- animaciones suaves de entrada;
+- soporte para `prefers-reduced-motion`;
+- breakpoints para desktop, tablet, mobile y pantallas pequeñas.
 
-# 🎨 Estilos
+---
 
-Los estilos principales se encuentran en:
+## 📷 Assets disponibles
 
-    src/styles/responsive.css
+Las imágenes del menú están en `public/assets` y cubren platos principales, bebidas y postres, entre ellos:
 
-Incluyen:
+- bife a la parrilla;
+- milanesa napolitana;
+- pasta casera;
+- risotto de hongos;
+- ensalada césar;
+- pollo al limón;
+- hamburguesa gourmet;
+- tacos de carne;
+- pizza artesanal;
+- salmón grillado;
+- vinos, cerveza, limonada y agua saborizada;
+- flan, tiramisú, cheesecake, helado y brownie.
 
--   layout adaptable
--   comportamiento responsive
--   optimización para dispositivos móviles
+---
 
-------------------------------------------------------------------------
+## 🌐 Deploy
 
-# 🌐 Deploy
+El proyecto está preparado para deploy en **Vercel** con la configuración de `vercel.json`:
 
-El proyecto está preparado para deploy en **Vercel**.
+- framework: `vite`;
+- build command: `npm run build`;
+- output directory: `dist`.
 
-Archivo de configuración:
+Deploy rápido desde CLI:
 
-    vercel.json
-
-Deploy rápido:
-
-``` bash
+```bash
 vercel
 ```
 
-O conectando el repositorio directamente desde el panel de Vercel.
+También se puede conectar el repositorio desde el panel de Vercel para deployments automáticos.
 
-------------------------------------------------------------------------
+---
 
-# 📷 Assets
+## 📝 Notas técnicas
 
-Las imágenes del menú gastronómico se encuentran en:
-
-    public/assets
-
-Ejemplos de platos incluidos:
-
--   pizza artesanal
--   hamburguesa gourmet
--   bife a la parrilla
--   risotto de hongos
--   cheesecake
--   tiramisú
--   vinos y bebidas
-
-------------------------------------------------------------------------
+- Los formularios no envían datos a un servidor: solo previenen el envío por defecto y muestran una confirmación local.
+- La carta se modifica editando el arreglo `items` en `src/components/Menu.tsx` y agregando o quitando imágenes en `public/assets`.
+- No hay rutas externas ni router instalado; la navegación actual se maneja dentro de `App.tsx`.
+- El proyecto es privado según `package.json`.
