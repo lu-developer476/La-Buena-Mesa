@@ -74,7 +74,6 @@ export default function App() {
               <span className="eyebrow">Nuestra carta</span>
               <h2>Menú</h2>
               <p>
-                Elegí entre principales, bebidas y postres preparados para disfrutar sin apuro.
               </p>
             </div>
             <Menu />
