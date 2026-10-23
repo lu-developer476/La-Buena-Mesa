@@ -1,0 +1,10 @@
+{
+  "name": "La Buena Mesa",
+  "short_name": "La Buena Mesa",
+  "description": "Sabores caseros, cocina honesta y momentos para compartir.",
+  "lang": "es-AR",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#153b36",
+  "background_color": "#153b36"
+}
