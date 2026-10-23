@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-# Agregar la directiva Sitemap cuando el dominio de producción esté definido.
+# Sitemap: https://TU-DOMINIO-OFICIAL/sitemap.xml
