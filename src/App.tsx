@@ -117,7 +117,7 @@ export default function App() {
                   <li><span>Viernes y sábado</span><strong>12:00–16:00 · 19:00–00:00</strong></li>
                   <li><span>Domingos</span><strong>12:00–16:00 · 19:00–22:30</strong></li>
                 </ul>
-                <p className="hours-note">Horarios referenciales para esta demo; se pueden ajustar según el servicio.</p>
+                <p className="hours-note">Consultá nuestros horarios antes de visitarnos para organizar tu próxima comida con tranquilidad.</p>
               </article>
               <article className="visit-card">
                 <h3>📍 Encontranos</h3>
