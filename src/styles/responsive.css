@@ -58,8 +58,7 @@ body {
   border-radius: clamp(16px, 2vw, 24px);
   backdrop-filter: blur(8px);
   padding: clamp(12px, 2vw, 20px);
-  position: sticky;
-  top: clamp(8px, 1.5vw, 14px);
+  position: relative;
   z-index: 10;
   box-shadow: var(--shadow-soft);
 }
@@ -263,11 +262,11 @@ main { display: grid; gap: clamp(14px, 2vw, 22px); width: 100%; }
   gap: 12px;
 }
 
-/* Alinea las descripciones de las tarjetas de contacto */
+/* Mantiene las descripciones alineadas sin separarlas demasiado de sus títulos */
 .contact-card > p {
-  min-height: 4.8em;
+  min-height: 3em;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
