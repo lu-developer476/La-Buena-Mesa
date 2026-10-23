@@ -263,6 +263,14 @@ main { display: grid; gap: clamp(14px, 2vw, 22px); width: 100%; }
   gap: 12px;
 }
 
+/* Alinea las descripciones de las tarjetas de contacto */
+.contact-card > p {
+  min-height: 4.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .site-form { display: grid; gap: 10px; }
 
 input, textarea {
