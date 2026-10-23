@@ -3,12 +3,13 @@ import Menu from "./components/Menu"
 import CateringForm from "./components/CateringForm"
 import SuggestionForm from "./components/SuggestionForm"
 
-type SectionId = "menu" | "quienes-somos" | "contacto"
+type SectionId = "menu" | "quienes-somos" | "contacto" | "ubicacion"
 
 const navItems: { id: SectionId; label: string }[] = [
   { id: "menu", label: "Menú" },
   { id: "quienes-somos", label: "Quiénes somos" },
   { id: "contacto", label: "Contacto" },
+  { id: "ubicacion", label: "Visitanos" },
 ]
 
 export default function App() {
@@ -98,6 +99,43 @@ export default function App() {
             <p>
               Hoy seguimos creciendo con la misma convicción que nos impulsó desde el primer día: que cada visita a La Buena Mesa sea más que una comida y se convierta en un momento memorable.
             </p>
+          </section>
+        )}
+
+        {activeSection === "ubicacion" && (
+          <section id="ubicacion" className="panel section-ubicacion">
+            <span className="eyebrow">Te esperamos</span>
+            <h2>Horarios y ubicación</h2>
+            <p className="intro-copy">
+              Vení a disfrutar de nuestros platos en un ambiente cálido. Estamos en Palermo, Ciudad Autónoma de Buenos Aires.
+            </p>
+            <div className="visit-grid">
+              <article className="visit-card">
+                <h3>🕒 Horarios de atención</h3>
+                <ul className="hours-list">
+                  <li><span>Lunes a jueves</span><strong>12:00–15:00 · 19:00–23:00</strong></li>
+                  <li><span>Viernes y sábado</span><strong>12:00–16:00 · 19:00–00:00</strong></li>
+                  <li><span>Domingos</span><strong>12:00–16:00 · 19:00–22:30</strong></li>
+                </ul>
+                <p className="hours-note">Horarios referenciales para esta demo; se pueden ajustar según el servicio.</p>
+              </article>
+              <article className="visit-card">
+                <h3>📍 Encontranos</h3>
+                <p>Palermo, Buenos Aires, Argentina</p>
+                <div className="map-frame">
+                  <iframe
+                    title="Mapa de ubicación de La Buena Mesa en Palermo, Buenos Aires"
+                    src="https://maps.google.com/maps?q=Palermo%2C%20Buenos%20Aires%2C%20Argentina&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    allowFullScreen
+                  />
+                </div>
+                <a className="map-link" href="https://www.google.com/maps/search/?api=1&query=Palermo%2C%20Buenos%20Aires%2C%20Argentina" target="_blank" rel="noreferrer">
+                  Abrir en Google Maps ↗
+                </a>
+              </article>
+            </div>
           </section>
         )}
 
