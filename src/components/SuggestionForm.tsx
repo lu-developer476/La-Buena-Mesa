@@ -14,8 +14,10 @@ export default function SuggestionForm() {
 
   return (
     <form className="site-form" onSubmit={submit}>
-      <input placeholder="Nombre" />
-      <textarea placeholder="Sugerencia" rows={4} />
+      <input placeholder="Nombre" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Teléfono (opcional)" />
+      <textarea placeholder="Sugerencia" rows={4} required />
       <button type="submit">Enviar</button>
     </form>
   )
